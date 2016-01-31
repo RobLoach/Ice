@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/home/rob/Documents/Ice/ice/__main__.py", line 7, in <module>
+    from runners import command_line_runner
+  File "ice/runners/command_line_runner.py", line 12, in <module>
+    from ice_engine import IceEngine
+  File "ice/runners/ice_engine.py", line 14, in <module>
+    from ice import backups
+  File "ice/backups.py", line 10, in <module>
+    from logs import logger
+  File "ice/logs.py", line 66, in <module>
+    logger = create_logger()
+  File "ice/logs.py", line 53, in create_logger
+    backupCount=5)
+  File "/usr/lib/python2.7/logging/handlers.py", line 117, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib/python2.7/logging/handlers.py", line 64, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib/python2.7/logging/__init__.py", line 911, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib/python2.7/logging/__init__.py", line 941, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: '/home/rob/.config/ice/ice.log'
